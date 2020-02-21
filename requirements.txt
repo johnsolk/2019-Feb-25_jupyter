@@ -1,0 +1,7 @@
+scanpy
+numpy
+scipy
+pandas
+matplotlib
+seaborn as sb
+SpatialDE
