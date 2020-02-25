@@ -57,13 +57,60 @@ from sklearn.decomposition import TruncatedSVD
 import matplotlib.pyplot as plt
 import numpy as np
 ```
-If you try to run the above, you can't because `` is not intalled.
+If you try to run the above, you can't because `sklearn` is not intalled.
 
 To install it, run this:
 ```
-!pip install
+!pip install sklearn
+```
+Download from [5k Peripheral blood mononuclear cells (PBMCs) from a healthy donor with cell surface proteins (Next GEM)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.1.0/5k_pbmc_protein_v3_nextgem):
+```
+!wget http://cf.10xgenomics.com/samples/cell-exp/3.1.0/5k_pbmc_protein_v3_nextgem/5k_pbmc_protein_v3_nextgem_filtered_feature_bc_matrix.tar.gz
+```
+Take a look:
+```
+!ls -lah
+```
+Annotate a cell with markdown (change from 'code' to 'markdown' with the pulldown menu) :
+```
+Who is [jovyan](https://github.com/jupyter/docker-stacks/issues/358)?
+```
+Decompress:
+```
+!tar -xvzf 5k_pbmc_protein_v3_nextgem_filtered_feature_bc_matrix.tar.gz
+!gunzip filtered_feature_bc_matrix/*.gz
+```
+Import:
+```
+mtx = mmread('filtered_feature_bc_matrix/matrix.mtx')
 ```
 
+SVD on filtered:
+```
+# Perform Singular Value Decomposition
+tsvd = TruncatedSVD(n_components=2)
+tsvd.fit(mtx_filtered)
+X_filtered = tsvd.transform(mtx_filtered)
+```
+Plot 2D PCA projection:
+```
+fig, ax = plt.subplots(figsize=(10, 7))
+ax.scatter(X[:,0], X[:,1], alpha=0.5, c="green")
+plt.axis('off')
+plt.show()
+```
+Create a plot genes detected vs. UMI counts:
+```
+fig, ax = plt.subplots(figsize=(10, 7))
+ax.scatter(np.asarray(mtx.sum(axis=1))[:,0], np.asarray(np.sum(mtx>0, axis=1))[:,0], color="green", alpha=0.01)
+ax.set_xlabel("UMI Counts")
+ax.set_ylabel("Genes Detected")
+ax.set_xscale('log')
+ax.set_yscale('log', nonposy='clip')
+ax.set_xlim((0.5, 4500))
+ax.set_ylim((0.5,2000))
+plt.show()
+```
 Example [violin plots from seaborn library](https://seaborn.pydata.org/examples/grouped_violinplots.html):
 ```
 import seaborn as sns
