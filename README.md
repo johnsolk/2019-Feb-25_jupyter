@@ -1,6 +1,6 @@
 # 2020-Feb-25_jupyter
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johnsolk/2019-Feb-25_jupyter/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johnsolk/2020-Feb-25_jupyter/master)
 
 # Intro
 
@@ -25,7 +25,7 @@ Today, we will:
 
 1. Click on the [mybinder](https://mybinder.org/) link below:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johnsolk/2019-Feb-25_jupyter/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johnsolk/2020-Feb-25_jupyter/master)
 
 Click on the 'Build logs' to show what is being installed.
 
