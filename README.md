@@ -36,7 +36,7 @@ cd scanpy
 pip install --user .
 ```
 
-3. Open notebook file.
+3. Open notebook file. This was copied from the [Analysis and visualization of spatial transcriptomics data](https://nbviewer.ipython.org/github/giovp/scanpy-tutorials/blob/spatial/analysis-visualization-spatial.ipynb) by the scanpy folks.
 4. Run commands.
 
 # Export
