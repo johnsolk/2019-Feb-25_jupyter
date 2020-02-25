@@ -35,6 +35,7 @@ Click on the 'Build logs' to show what is being installed.
 git clone https://github.com/theislab/scanpy.git
 cd scanpy
 pip install --user .
+pip install spatialde
 ```
 
 3. Open notebook file. This was copied from the [Analysis and visualization of spatial transcriptomics data](https://nbviewer.ipython.org/github/giovp/scanpy-tutorials/blob/spatial/analysis-visualization-spatial.ipynb) by the [scanpy](https://scanpy.readthedocs.io/en/stable/) folks.
