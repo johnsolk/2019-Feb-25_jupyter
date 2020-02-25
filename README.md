@@ -19,7 +19,7 @@ Today, we will:
 * Load an existing notebook file
 * Export
 * Start a new notebook file
-* (Optional) R Studio
+* (Optional) R jupyter notebook, R Studio with mybinder
 * (Optional) install jupyter notebook locally
 
 # Load an existing notebook file
