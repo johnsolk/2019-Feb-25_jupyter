@@ -128,7 +128,15 @@ sns.violinplot(x="day", y="total_bill", hue="smoker",
 sns.despine(left=True)
 ```
 
-## RStudio:
+# (Optional) R jupyter notebook & R Studio with mybinder
+
+### R jupyter notebook
+
+Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb)
+
+[Examples with R](https://github.com/binder-examples/r)
+
+### R Studio with mybinder
 
 Running [RStudio](https://github.com/binder-examples/dockerfile-rstudio) through binder:
 
