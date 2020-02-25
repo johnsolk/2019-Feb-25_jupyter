@@ -1,5 +1,7 @@
 # 2019-Feb-25_jupyter
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johnsolk/2019-Feb-25_jupyter/master)
+
 # Intro
 
 [Jupyter](https://jupyter.org/) notebooks started as the IPython (interactive Python) notebook. This is why the file extension of the notebooks is `.ipynb`. Now, you - as the user - can use the re-branded Jupyter notebook for Python coding in addition to [many other languages, including R](https://jupyter.org/try).
