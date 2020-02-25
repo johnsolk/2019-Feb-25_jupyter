@@ -49,9 +49,13 @@ Click on the 'File' menu, select 'Download as'. There are several options. I use
 
 2. Copy/paste:
 
+These are some plots/commands from this [tutorial](https://colab.research.google.com/github/pachterlab/kallistobustools/blob/master/notebooks/kb_intro_1_python.ipynb).
+
 ```
-
-
+from scipy.io import mmread
+from sklearn.decomposition import TruncatedSVD
+import matplotlib.pyplot as plt
+import numpy as np
 ```
 If you try to run the above, you can't because `` is not intalled.
 
