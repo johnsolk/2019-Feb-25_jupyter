@@ -82,6 +82,25 @@ Who is [jovyan](https://github.com/jupyter/docker-stacks/issues/358)?
 Decompress:
 ```
 !tar -xvzf 5k_pbmc_protein_v3_nextgem_filtered_feature_bc_matrix.tar.gz
+```
+Using [scanpy pbmc tutorial](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html)
+
+```
+adata = sc.read_10x_mtx(
+    'filtered_feature_bc_matrix/',  # the directory with the `.mtx` file
+    var_names='gene_symbols',                  # use gene symbols for the variable names (variables-axis index)
+    cache=True)  
+```
+Make unique:
+```
+adata.var_names_make_unique() 
+```
+Show genes that yield the highest fraction of counts in each cell, across all cells.
+```
+sc.pl.highest_expr_genes(adata, n_top=20, )
+```
+Unzip:
+```
 !gunzip filtered_feature_bc_matrix/*.gz
 ```
 Import:
@@ -114,23 +133,6 @@ ax.set_yscale('log', nonposy='clip')
 ax.set_xlim((0.5, 4500))
 ax.set_ylim((0.5,2000))
 plt.show()
-```
-
-Using [scanpy pbmc tutorial](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html)
-
-```
-adata = sc.read_10x_mtx(
-    'filtered_feature_bc_matrix/',  # the directory with the `.mtx` file
-    var_names='gene_symbols',                  # use gene symbols for the variable names (variables-axis index)
-    cache=True)  
-```
-Make unique:
-```
-adata.var_names_make_unique() 
-```
-Show genes that yield the highest fraction of counts in each cell, across all cells.
-```
-sc.pl.highest_expr_genes(adata, n_top=20, )
 ```
 
 Example [violin plots from seaborn library](https://seaborn.pydata.org/examples/grouped_violinplots.html):
