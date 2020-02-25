@@ -3,6 +3,5 @@ scipy
 pandas
 matplotlib
 seaborn
-SpatialDE
 louvain
 python-igraph
