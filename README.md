@@ -124,6 +124,14 @@ adata = sc.read_10x_mtx(
     var_names='gene_symbols',                  # use gene symbols for the variable names (variables-axis index)
     cache=True)  
 ```
+Make unique:
+```
+adata.var_names_make_unique() 
+```
+Show genes that yield the highest fraction of counts in each cell, across all cells.
+```
+sc.pl.highest_expr_genes(adata, n_top=20, )
+```
 
 Example [violin plots from seaborn library](https://seaborn.pydata.org/examples/grouped_violinplots.html):
 ```
