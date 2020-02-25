@@ -70,6 +70,25 @@ Running [RStudio](https://github.com/binder-examples/dockerfile-rstudio) through
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/binder-examples/dockerfile-rstudio/master)
 
+Install Biocondutor and DropletUtils library:
+
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("DropletUtils")
+library("DropletUtils")
+```
+Download:
+```
+wget http://cf.10xgenomics.com/samples/cell-exp/3.1.0/5k_pbmc_protein_v3_nextgem/5k_pbmc_protein_v3_nextgem_molecule_info.h5
+```
+Import:
+```
+mol.info.file <- "5k_pbmc_protein_v3_nextgem_molecule_info.h5"
+molinfo <- read10xMolInfo(mol.info.file)
+molinfo
+```
+
 Click [here for instructions on how to run an R Jupyter notebook with binder](https://github.com/binder-examples/r).
 
 # (OPTIONAL) install jupyter notebook locally
