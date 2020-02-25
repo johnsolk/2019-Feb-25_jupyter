@@ -58,6 +58,8 @@ from scipy.io import mmread
 from sklearn.decomposition import TruncatedSVD
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import scanpy as sc
 ```
 If you try to run the above, you can't because `sklearn` is not intalled.
 
@@ -113,6 +115,16 @@ ax.set_xlim((0.5, 4500))
 ax.set_ylim((0.5,2000))
 plt.show()
 ```
+
+Using [scanpy pbmc tutorial](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html)
+
+```
+adata = sc.read_10x_mtx(
+    'filtered_feature_bc_matrix/',  # the directory with the `.mtx` file
+    var_names='gene_symbols',                  # use gene symbols for the variable names (variables-axis index)
+    cache=True)  
+```
+
 Example [violin plots from seaborn library](https://seaborn.pydata.org/examples/grouped_violinplots.html):
 ```
 import seaborn as sns
