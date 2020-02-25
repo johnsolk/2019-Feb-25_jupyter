@@ -36,6 +36,13 @@ Today, we will walk through steps on your own computer how to:
 
 
 
+Install scanpy:
+```
+git clone https://github.com/theislab/scanpy.git
+cd scanpy
+pip install --user .
+```
+
 
 
 # (OPTIONAL) Install jupyter notebook locally
