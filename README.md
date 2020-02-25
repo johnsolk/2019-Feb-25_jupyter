@@ -36,7 +36,7 @@ cd scanpy
 pip install --user .
 ```
 
-3. Open notebook file. This was copied from the [Analysis and visualization of spatial transcriptomics data](https://nbviewer.ipython.org/github/giovp/scanpy-tutorials/blob/spatial/analysis-visualization-spatial.ipynb) by the scanpy folks.
+3. Open notebook file. This was copied from the [Analysis and visualization of spatial transcriptomics data](https://nbviewer.ipython.org/github/giovp/scanpy-tutorials/blob/spatial/analysis-visualization-spatial.ipynb) by the [scanpy](https://scanpy.readthedocs.io/en/stable/) folks.
 4. Run commands.
 
 # Export
@@ -77,7 +77,7 @@ wget -O ~/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Lin
 bash ~/miniconda.sh -b -p $HOME/miniconda
 source ~/miniconda/bin/activate
 ```
-Create environment:
+Create [environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html):
 ```
 conda create -y -n py3.jupyter jupyter
 ```
